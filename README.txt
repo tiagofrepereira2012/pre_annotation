@@ -17,7 +17,8 @@ Installation
   To follow these instructions locally you will need a local copy of this
   package. Start by cloning this project with something like::
 
-    $ git clone http://github.com/idiap/bob.project.example
+    $ git clone https://github.com/idiap/bob.project.example.git
+    $ cd bob.project.example
 
   Before continuing, if you have not already done so.
 
