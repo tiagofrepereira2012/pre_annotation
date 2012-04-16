@@ -1,7 +1,3 @@
-.. vim: set filetype=rst : set fileencoding=utf-8 :
-.. Andre Anjos <andre.anjos@idiap.ch>
-.. Sun 15 Apr 10:13:47 2012 CEST
-
 Example buildout environment
 ============================
 
