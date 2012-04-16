@@ -12,13 +12,22 @@ distribute code to reproduce your publication.
 Installation
 ------------
 
+.. note::
+
+  To follow these instructions locally you will need a local copy of this
+  package. Start by cloning this project with something like::
+
+    $ git clone http://github.com/idiap/bob.project.example
+
+  Before continuing, if you have not already done so.
+
 Installation of the toolkit uses the `buildout <http://www.buildout.org/>`_
 build environment. You don't need to understand its inner workings to use this
 package. Here is a recipe to get you started (shell commands are marked with a
 ``$`` signal)::
-
-  $ python ./bootstrap.py
-  $ bin/buildout
+  
+  $ python bootstrap.py
+  $ ./bin/buildout
 
 These 2 commands should download and install all non-installed dependencies and
 get you a fully operational test and development environment.
@@ -30,8 +39,8 @@ get you a fully operational test and development environment.
   inside this package. Because this package makes use of `Bob
   <http://idiap.github.com/bob>`_, you must make sure that the ``bootstrap.py``
   script is called with the **same** interpreter used to build Bob, or
-  unexpected problems might occur. 
-  
+  unexpected problems might occur.
+
   If Bob is installed by the administrator of your system, it is safe to
   consider it uses the default python interpreter. In this case, the above 3
   command lines should work as expected.
