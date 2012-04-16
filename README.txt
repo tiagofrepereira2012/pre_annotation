@@ -13,10 +13,14 @@ Installation
   To follow these instructions locally you will need a local copy of this
   package. Start by cloning this project with something like::
 
-    $ git clone https://github.com/idiap/bob.project.example.git
+    $ git clone --depth=1 https://github.com/idiap/bob.project.example.git
     $ cd bob.project.example
+    $ rm -rf .git # you don't need the git directories...
 
-  Before continuing, if you have not already done so.
+  Alternatively, you can use the github tarball API to download the package::
+
+    $ wget --no-check-certificate https://github.com/idiap/bob.project.example/tarball/master -O- | tar xz 
+    $ mv idiap-bob.project* bob.project.example
 
 Installation of the toolkit uses the `buildout <http://www.buildout.org/>`_
 build environment. You don't need to understand its inner workings to use this
