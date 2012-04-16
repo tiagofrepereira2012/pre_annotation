@@ -36,7 +36,7 @@ setup(
 
     # If you have a better, long description of your package, place it on the
     # 'doc' directory and then hook it here
-    long_description=open('doc/long-description.rst').read(),
+    #long_description=open('doc/long-description.rst').read(),
 
     # This line is required for any distutils based packaging.
     packages=find_packages(),
