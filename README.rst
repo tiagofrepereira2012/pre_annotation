@@ -11,7 +11,8 @@ Installation
 .. note::
 
   To follow these instructions locally you will need a local copy of this
-  package. Start by cloning this project with something like::
+  package. Start by cloning this project with something like (shell commands are marked with a
+``$`` signal)::
 
     $ git clone --depth=1 https://github.com/idiap/bob.project.example.git
     $ cd bob.project.example
@@ -24,8 +25,7 @@ Installation
 
 Installation of the toolkit uses the `buildout <http://www.buildout.org/>`_
 build environment. You don't need to understand its inner workings to use this
-package. Here is a recipe to get you started (shell commands are marked with a
-``$`` signal)::
+package. Here is a recipe to get you started::
   
   $ python bootstrap.py
   $ ./bin/buildout
