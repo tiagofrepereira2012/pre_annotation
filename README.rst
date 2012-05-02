@@ -11,8 +11,8 @@ Installation
 .. note::
 
   To follow these instructions locally you will need a local copy of this
-  package. Start by cloning this project with something like (shell commands are marked with a
-``$`` signal)::
+  package. Start by cloning this project with something like (shell commands 
+  are marked with a ``$`` signal)::
 
     $ git clone --depth=1 https://github.com/idiap/bob.project.example.git
     $ cd bob.project.example
