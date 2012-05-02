@@ -56,7 +56,7 @@ Reference
 ---------
 
 Include your `bibtex` reference to make it easy for others to cite your work
-correctly:
+correctly::
 
   @ARTICLE{joedoe-2012,
     author = {Joe Doe},
