@@ -3,7 +3,9 @@ Example buildout environment
 
 This simple example demonstrates how to wrap Bob-based scripts on buildout
 environments. This may be useful for homework assignments, tests or as a way to
-distribute code to reproduce your publication.
+distribute code to reproduce your publication. In summary, if you need to give
+out code to others, we recommend you do it following this template so your code
+can be tested, documented and run in an orderly fashion.
 
 Installation
 ------------
@@ -46,11 +48,32 @@ get you a fully operational test and development environment.
   consider it uses the default python interpreter. In this case, the above 3
   command lines should work as expected.
 
-Usage
------
+Documentation
+-------------
 
-Please refer to the documentation inside the ``doc`` directory of this package
-for further instructions on the functionality available inside this package.
+To write documentation, use the `Sphinx Document Generator
+<http://sphinx.pocoo.org/>`_. A template has been setup for you under the
+``docs`` directory. Get familiar with Sphinx and then unleash the writer in
+you.
+
+Once you have edited both ``docs/conf.py`` and ``docs/index.rst`` you can run
+the document generator executing ``./bin/sphinx``. The system is setup to
+generate output at the ``built-docs`` directory. 
+
+For more details and tweaking hints checkout the manual for
+`collective.recipe.sphinxbuilder
+<http://pypi.python.org/pypi/collective.recipe.sphinxbuilder/>`_
+
+Unit Tests
+----------
+
+Writing unit tests is an important asset on code that needs to run in different
+platforms and a great way to make sure all is OK. We have setup a template for
+tests under ``example/test.py``. Tests are setup in `buildout`` using the
+recipe `pbp.recipe.noserunner
+<http://pypi.python.org/pypi/pbp.recipe.noserunner/>`_. A script called
+``./bin/tests.py`` will be created which can run anything that resembles a test
+on the example package.
 
 Reference
 ---------

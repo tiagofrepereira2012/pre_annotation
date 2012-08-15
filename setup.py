@@ -47,7 +47,7 @@ setup(
     # scripts of this package. Don't worry - You won't need adminstrative
     # privileges when using buildout.
     install_requires=[
-        "bob",      # base signal proc./machine learning library
+        "bob >= 1.0.2",      # base signal proc./machine learning library
 
         # here are some more examples you could include:
         #"argparse", # better option parsing
@@ -69,7 +69,7 @@ setup(
     # the version of bob.
     entry_points={
       'console_scripts': [
-        'test.py = example.test:main',
+        'version.py = example.script.version:main',
         ],
       },
 
