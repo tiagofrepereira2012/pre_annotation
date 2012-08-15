@@ -62,7 +62,7 @@ generate output at the ``built-docs`` directory.
 
 For more details and tweaking hints checkout the manual for
 `collective.recipe.sphinxbuilder
-<http://pypi.python.org/pypi/collective.recipe.sphinxbuilder/>`_
+<http://pypi.python.org/pypi/collective.recipe.sphinxbuilder/>`_.
 
 Unit Tests
 ----------
