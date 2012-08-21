@@ -33,7 +33,8 @@ setup(
 
     url='http://github.com/idiap/bob.project.example',
     license='GPLv3',
-    author_email='Andre Anjos <andre.anjos@idiap.ch>',
+    author='Andre Anjos',
+    author_email='andre.anjos@idiap.ch',
 
     # If you have a better, long description of your package, place it on the
     # 'doc' directory and then hook it here
