@@ -30,13 +30,14 @@ setup(
     name='bob.project.example',
     version='0.1',
     description='Example for using Bob inside a buildout project',
+
     url='http://github.com/idiap/bob.project.example',
     license='LICENSE.txt',
     author_email='Andre Anjos <andre.anjos@idiap.ch>',
 
     # If you have a better, long description of your package, place it on the
     # 'doc' directory and then hook it here
-    long_description=open('README.rst').read(),
+    long_description=open('readme.rst').read(),
 
     # This line is required for any distutils based packaging.
     packages=find_packages(),
@@ -47,10 +48,7 @@ setup(
     # scripts of this package. Don't worry - You won't need adminstrative
     # privileges when using buildout.
     install_requires=[
-        "bob >= 1.0.2",      # base signal proc./machine learning library
-
-        # here are some more examples you could include:
-        #"argparse", # better option parsing
+        "bob == master",      # base signal proc./machine learning library
     ],
 
     # This entry defines which scripts you will have inside the 'bin' directory
