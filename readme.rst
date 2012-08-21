@@ -46,7 +46,13 @@ get you a fully operational test and development environment.
 
   If Bob is installed by the administrator of your system, it is safe to
   consider it uses the default python interpreter. In this case, the above 3
-  command lines should work as expected.
+  command lines should work as expected. If that is not the case, tweak the
+  section ``external`` with the path up to place where the Bob egg is
+  installed. The recipe in the ``external`` section
+  (``idiap.recipe.externaleggs``) will scan directories in search for Python
+  eggs starting at the path you give. Eggs which are found are automatically
+  added to your path and will be available to the various scripts created by
+  this package.
 
 Documentation
 -------------
@@ -58,7 +64,7 @@ you.
 
 Once you have edited both ``docs/conf.py`` and ``docs/index.rst`` you can run
 the document generator executing ``./bin/sphinx``. The system is setup to
-generate output at the ``built-docs`` directory. 
+generate output at the ``sphinx`` directory. 
 
 For more details and tweaking hints checkout the manual for
 `collective.recipe.sphinxbuilder
