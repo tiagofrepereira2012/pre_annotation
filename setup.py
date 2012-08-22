@@ -27,7 +27,7 @@ setup(
 
     # This is the basic information about your project. Modify all this
     # information before releasing code publicly.
-    name='bob.project.example',
+    name='xbob.example',
     version='0.1',
     description='Example for using Bob inside a buildout project',
 
@@ -50,7 +50,22 @@ setup(
     # scripts of this package. Don't worry - You won't need adminstrative
     # privileges when using buildout.
     install_requires=[
-        "bob == master",      # base signal proc./machine learning library
+      'setuptools',
+      'bob', # base signal proc./machine learning library
+    ],
+
+    # Your project should be called something like 'xbob.<foo>' or 
+    # 'xbob.<foo>.<bar>'. To implement this correctly and still get all your
+    # packages to be imported w/o problems, you need to implement namespaces
+    # on the various levels of the package and declare them here. See more
+    # about this here:
+    # http://peak.telecommunity.com/DevCenter/setuptools#namespace-packages
+    #
+    # Our database packages are good examples of namespace implementations
+    # using several layers. You can check them out here:
+    # https://github.com/idiap/bob/wiki/Satellite-Packages
+    namespace_packages = [
+      'xbob',
     ],
 
     # This entry defines which scripts you will have inside the 'bin' directory
@@ -68,11 +83,29 @@ setup(
     # In this simple example we will create a single program that will print
     # the version of bob.
     entry_points={
+
+      # scripts should be declared using this entry:
       'console_scripts': [
-        'version.py = example.script.version:main',
+        'version.py = xbob.example.script.version:main',
         ],
+
+      # tests that are _exported_ (that can be executed by other packages) can
+      # be signalized like this:
+      'bob.test': [
+         'example = xbob.example.test:MyTests',
+         ],
+
+      # finally, if you are writing a database package, you must declare the
+      # relevant entries like this:
+      #'bob.db': [
+      #  'example = xbob.example.driver:Interface',
+      #  ]
+      # Note: this is just an example, this package does not declare databases
       },
 
+    # Classifiers are important if you plan to distribute this package through
+    # PyPI. You can find the complete list of classifiers that are valid and
+    # useful here (http://pypi.python.org/pypi?%3Aaction=list_classifiers).
     classifiers = [
       'Development Status :: 4 - Beta',
       'Intended Audience :: Developers',
