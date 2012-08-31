@@ -21,7 +21,7 @@ Installation
 Documentation and Further Information
 -------------------------------------
 
-Please refer to the latest Bob manual, accessing from the `Bob website
+Please refer to the latest Bob user guide, accessing from the `Bob website
 <http://idiap.github.com/bob/>`_ for how to create your own packages based on
 this example. In particular, the Section entitled `Organize Your Work in
 Satellite Packages <http://www.idiap.ch/software/bob/docs/nightlies/last/bob/sphinx/html/doc/OrganizeYourCode.html>`_ 
