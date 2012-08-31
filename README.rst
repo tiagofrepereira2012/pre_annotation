@@ -13,14 +13,7 @@ Installation
 .. note::
 
   To follow these instructions locally you will need a local copy of this
-  package. Start by cloning this project with something like (shell commands 
-  are marked with a ``$`` sign)::
-
-    $ git clone --depth=1 https://github.com/idiap/bob.project.example.git
-    $ cd bob.project.example
-    $ rm -rf .git # you don't need the git directories...
-
-  Alternatively, you can use the github tarball API to download the package::
+  package. For that, you can use the github tarball API to download the package::
 
     $ wget --no-check-certificate https://github.com/idiap/bob.project.example/tarball/master -O- | tar xz 
     $ mv idiap-bob.project* bob.project.example
@@ -31,5 +24,5 @@ Documentation and Further Information
 Please refer to the latest Bob manual, accessing from the `Bob website
 <http://idiap.github.com/bob/>`_ for how to create your own packages based on
 this example. In particular, the Section entitled `Organize Your Work in
-Satellite Packages` contains details on how to setup, build and roll out your
-code.
+Satellite Packages <http://www.idiap.ch/software/bob/docs/nightlies/last/bob/sphinx/html/doc/OrganizeYourCode.html>`_ 
+contains details on how to setup, build and roll out your code.
