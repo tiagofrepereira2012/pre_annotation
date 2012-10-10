@@ -9,9 +9,10 @@
 def bob_version(): 
   """Returns the current version of Bob"""
 
-  from bob.build import version
+  import pkg_resources
+  package = pkg_resources.require('bob')[0].version
 
-  return version
+  return package.version
 
 def main():
   """Main routine, called by the script that gets the version of bob"""
