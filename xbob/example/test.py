@@ -11,4 +11,5 @@ import unittest
 class MyTests(unittest.TestCase):
 
   def test_version(self):
-    self.assertTrue(__import__('bob').build.version is not None)
+    from .script import version
+    self.assertEqual(version.main(), 0)
