@@ -45,7 +45,7 @@ setup(
     version='0.1',
     description='Example for using Bob inside a buildout project',
 
-    url='http://github.com/idiap/bob.project.example',
+    url='http://github.com/bioidiap/bob.project.example',
     license='GPLv3',
     author='Andre Anjos',
     author_email='andre.anjos@idiap.ch',
