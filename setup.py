@@ -41,15 +41,15 @@ setup(
 
     # This is the basic information about your project. Modify all this
     # information before releasing code publicly.
-    name='xbob.example',
+    name='pre_annotation',
     version='0.1',
     description='Example for using Bob inside a buildout project',
 
-    url='http://github.com/bioidiap/bob.project.example',
+    url='http://github.com/tiagofrepereira2012/pre_annotation',
     license='GPLv3',
-    author='Andre Anjos',
-    author_email='andre.anjos@idiap.ch',
-    keywords='bob, xbob',
+    author='Tiago de Freitas Pereira',
+    author_email='tiago.pereira@idiap.ch',
+    keywords='bob',
 
     # If you have a better, long description of your package, place it on the
     # 'doc' directory and then hook it here
@@ -66,7 +66,12 @@ setup(
     # privileges when using buildout.
     install_requires=[
       'setuptools',
-      'bob', # base signal proc./machine learning library
+
+      'bob.io.base',
+      'bob.io.image',
+      'bob.ip.flandmark',
+      'bob.ip.color',
+      'gridtk'
     ],
 
     # Your project should be called something like 'xbob.<foo>' or 
@@ -80,7 +85,7 @@ setup(
     # using several layers. You can check them out here:
     # https://github.com/idiap/bob/wiki/Satellite-Packages
     namespace_packages = [
-      'xbob',
+      'pre_annotation',
     ],
 
     # This entry defines which scripts you will have inside the 'bin' directory
@@ -101,14 +106,9 @@ setup(
 
       # scripts should be declared using this entry:
       'console_scripts': [
-        'version.py = xbob.example.script.version:main',
+        'pre_annotate.py = pre_annotation.script.pre_annotate:main',
         ],
 
-      # tests that are _exported_ (that can be executed by other packages) can
-      # be signalized like this:
-      'bob.test': [
-         'example = xbob.example.test:MyTests',
-         ],
 
       # finally, if you are writing a database package, you must declare the
       # relevant entries like this:
