@@ -40,17 +40,16 @@ def main():
     output_filename =  os.path.join(sys.argv[3], o.rstrip("\n")+".pos")
 
     img = bob.ip.color.rgb_to_gray(bob.io.base.load(filename))
-
     cc = CascadeClassifier('./pre_annotation/data/haarcascade_frontalface_alt2.xml')
 
     face_bbxs = cc.detectMultiScale(img, 1.3, 4, 0, (20, 20))
     if(len(face_bbxs)>0):
-      key_temp = localizer.locate(img, face_bbxs[0][0], face_bbxs[0][1], face_bbxs[0][2], face_bbxs[0][3])
+      key_temp = localizer.locate(img, face_bbxs[0][1], face_bbxs[0][0], face_bbxs[0][2], face_bbxs[0][3])
       if(key_temp is not None):
-        R_eye = [ (key_temp[1,0] + key_temp[5,0])/2, (key_temp[1,1] + key_temp[5,1])/2  ]
-        L_eye = [ (key_temp[2,0] + key_temp[6,0])/2, (key_temp[2,1] + key_temp[6,1])/2  ]      
-
-        keypoints = [int(L_eye[0]), int(L_eye[1]), int(R_eye[0]), int(R_eye[1])]
+        R_eye = [ (key_temp[1,0] + key_temp[5,0])/2, (key_temp[1,1] + key_temp[5,1])/2  ]        
+        L_eye = [ (key_temp[2,0] + key_temp[6,0])/2, (key_temp[2,1] + key_temp[6,1])/2  ]
+        keypoints = [int(L_eye[1]), int(L_eye[0]), int(R_eye[1]), int(R_eye[0])]
+                        
       else:
         keypoints = [100,100,100,200]
 
