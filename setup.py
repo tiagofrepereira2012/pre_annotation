@@ -107,6 +107,7 @@ setup(
       # scripts should be declared using this entry:
       'console_scripts': [
         'pre_annotate.py = pre_annotation.script.pre_annotate:main',
+        'post_process.py = pre_annotation.script.post_process:main',
         ],
 
 
