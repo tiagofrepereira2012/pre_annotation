@@ -39,7 +39,10 @@ def main():
     filename        =  os.path.join(sys.argv[2], o.rstrip("\n"))
     output_filename =  os.path.join(sys.argv[3], o.rstrip("\n")+".pos")
 
-    img = bob.ip.color.rgb_to_gray(bob.io.base.load(filename))
+    img = bob.io.base.load(filename)
+    if(len(img.shape)==3):
+      img = bob.ip.color.rgb_to_gray(img)
+    
     cc = CascadeClassifier('./pre_annotation/data/haarcascade_frontalface_alt2.xml')
 
     face_bbxs = cc.detectMultiScale(img, 1.3, 4, 0, (20, 20))
